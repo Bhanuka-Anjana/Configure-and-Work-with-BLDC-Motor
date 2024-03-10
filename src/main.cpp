@@ -1,11 +1,11 @@
 #include <Arduino.h>
-#include <Server.h>
+#include <Servo.h>
 
 // esc pin (it can be any PWM pin)
 #define ESC_PIN 9
 
 // Create a new instance of the Server class
-Server esc;
+Servo esc;
 
 // Function to calibrate the ESC
 void calibrateESC();
@@ -13,7 +13,7 @@ void calibrateESC();
 void setup()
 {
   calibrateESC();
-  esc.write(10);
+  esc.write(5);
 }
 
 void loop()
